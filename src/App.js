@@ -7,6 +7,7 @@ import beachball from './beach-ball-575425_960_720.png';
 import yogaball from './1-2-gym-ball-png-clipart.png';
 import Ball from "./Ball";
 
+const scrollTo = (href) => window.location = `#${href}`;
 
 class App extends Component {
 
@@ -16,13 +17,19 @@ class App extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
+
     handleClick(selected) {
         this.setState((prevState) => {
-            prevState.selected === selected
-            return {selected: prevState.selected === selected ? null : selected};
-        }, () => window.location = `#${this.state.selected ? selected : 'top'}`);
+                prevState.selected === selected
+                return {selected: prevState.selected === selected ? null : selected};
+            },
+            () => {
+                setTimeout(() => {
+                        scrollTo(this.state.selected ? selected : 'top');
+                    }
+                , 2000)
+            });
     }
-
 
     render() {
         return (
