@@ -8,6 +8,8 @@ const calculateFibSize = fibPoint => min / 20 * fibPoint;
 
 function size(id) {
     switch (id) {
+        case 'golfball':
+            return {height: calculateFibSize(1) + 'px', width: calculateFibSize(1) + 'px'};
         case 'baseball':
             return {height: calculateFibSize(3) + 'px', width: calculateFibSize(3) + 'px'};
         case 'soccerball':

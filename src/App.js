@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import golfball from './Golf.png';
 import baseball from './Baseball.svg.png';
 import soccerball from './ball-306820_960_720.png';
 import basketball from './Basketball.png';
@@ -47,6 +48,7 @@ class App extends Component {
                 {/*<img src={baseball} alt="logo" style={small}/>*/}
                 {/*<img src={baseball} alt="logo" style={small}/>*/}
                 {/*<img src={baseball} alt="logo" style={small}/>*/}
+                <Ball id='golfball' image={golfball} onClick={this.handleClick} selected={this.state.selected}/>
                 <Ball id='baseball' image={baseball} onClick={this.handleClick} selected={this.state.selected}/>
                 <Ball id='soccerball' image={soccerball} onClick={this.handleClick} selected={this.state.selected}/>
                 <Ball id='basketball' image={basketball} onClick={this.handleClick} selected={this.state.selected}/>
